@@ -1,0 +1,15 @@
+p#notice = notice
+
+p
+  strong Title:
+  = @scribble.title
+p
+  strong Content:
+  = @scribble.content
+p
+  strong On:
+  = @scribble.on
+
+= link_to 'Edit', edit_scribble_path(@scribble)
+'|
+= link_to 'Back', scribbles_path
