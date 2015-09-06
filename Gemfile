@@ -5,6 +5,7 @@ ruby File.read('.ruby-version').rstrip
 gem 'rails', '~> 4.2.4'
 
 gem 'bcrypt', '~> 3.1.7'
+gem 'bootstrap-material-design'
 gem 'bootstrap-sass', '~> 3.3.5'
 gem 'coffee-rails', '~> 4.1.0'
 gem 'jbuilder', '~> 2.0'
