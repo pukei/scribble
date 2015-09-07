@@ -6,13 +6,14 @@
         - @scribble.errors.full_messages.each do |message|
           li = message
 
-  .field
+  .form-group
     = f.label :title
-    = f.text_field :title
-  .field
+    = f.text_field :title, class: 'form-control'
+  .form-group
     = f.label :content
-    = f.text_area :content
-  .field
+    = f.text_area :content, class: 'form-control', 'data-provide' => 'markdown', rows: 10
+  .form-group
     = f.label :on
-    = f.check_box :on
-  .actions = f.submit
+    = f.check_box :on, class: 'form-control'
+  .form-group
+    .actions = f.submit 'Save', class: 'btn btn-primary'

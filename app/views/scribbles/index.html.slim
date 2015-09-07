@@ -1,11 +1,10 @@
 h1 Listing scribbles
 
-table
+table.table
   thead
     tr
       th Title
       th Content
-      th On
       th
       th
       th
@@ -14,8 +13,7 @@ table
     - @scribbles.each do |scribble|
       tr
         td = scribble.title
-        td = scribble.content
-        td = scribble.on
+        /td = scribble.content.html_safe
         td = link_to 'Show', scribble
         td = link_to 'Edit', edit_scribble_path(scribble)
         td = link_to 'Destroy', scribble, data: {:confirm => 'Are you sure?'}, :method => :delete

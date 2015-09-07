@@ -7,5 +7,12 @@ head
   = csrf_meta_tags
 
 body
+  nav.navbar.navbar-inverse
+    .container
+      .navbar-header = link_to 'Scribbles', root_url, class: 'navbar-brand'
   .container
-    = yield
+    .row
+      = yield
+  footer.footer
+    .container
+      p.text-muted Place sticky footer content here.

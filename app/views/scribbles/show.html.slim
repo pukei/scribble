@@ -1,15 +1,11 @@
-p#notice = notice
+.col-sm-12
+  .page-header
+    h1
+      = @scribble.title
+      small =< @scribble.created_at.strftime('%d %b %Y')
+  .panel.panel-default
+    .panel-body = @scribble.content.html_safe
 
-p
-  strong Title:
-  = @scribble.title
-p
-  strong Content:
-  = @scribble.content
-p
-  strong On:
-  = @scribble.on
-
-= link_to 'Edit', edit_scribble_path(@scribble)
-'|
-= link_to 'Back', scribbles_path
+  = link_to 'Edit', edit_scribble_path(@scribble)
+  '|
+  = link_to 'Back', scribbles_path
