@@ -1,11 +1,8 @@
-.col-sm-12
-  .page-header
-    h1
-      = @scribble.title
+.page-header
+  h1
+    = @scribble.title
       small =< @scribble.created_at.strftime('%d %b %Y')
-  .panel.panel-default
-    .panel-body = @scribble.content.html_safe
+    = link_to 'Edit', edit_scribble_path(@scribble), class: 'btn btn-primary btn-lg pull-right'
+.panel.panel-default
+  .panel-body = @scribble.content.html_safe
 
-  = link_to 'Edit', edit_scribble_path(@scribble)
-  '|
-  = link_to 'Back', scribbles_path

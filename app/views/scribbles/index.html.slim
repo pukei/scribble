@@ -1,23 +1,6 @@
-h1 Listing scribbles
-
-table.table
-  thead
-    tr
-      th Title
-      th Content
-      th
-      th
-      th
-
-  tbody
-    - @scribbles.each do |scribble|
-      tr
-        td = scribble.title
-        /td = scribble.content.html_safe
-        td = link_to 'Show', scribble
-        td = link_to 'Edit', edit_scribble_path(scribble)
-        td = link_to 'Destroy', scribble, data: {:confirm => 'Are you sure?'}, :method => :delete
-
-br
-
-= link_to 'New Scribble', new_scribble_path
+- @scribbles.each do |scribble|
+  .jumbotron
+    h2 = scribble.title
+    /p = sanitize(truncate(scribble.content.html_safe, length: 500))
+    p = truncate(strip_tags(scribble.content), length: 500)
+    p = link_to 'Read more...', scribble, class: 'btn btn-primary btn-lg'
