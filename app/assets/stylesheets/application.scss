@@ -24,3 +24,10 @@ $font-size-base: 12px;
     padding: 30px 60px;
   }
 }
+
+@media (max-width: $screen-sm-min) {
+  .container .jumbotron, .container-fluid .jumbotron {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
