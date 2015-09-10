@@ -1,10 +1,11 @@
-h1 Can't go no further
-= form_tag '/login' do
-  | Email:
-  .field
-    = text_field_tag :email
-  | Password:
-  .field
-    = password_field_tag :password
-  = submit_tag 'Save', class: 'btn btn-primary'
-
+.col-sm-4.col-sm-offset-4
+  h2 Can't go no further
+  = form_tag '/login' do
+    .form-group
+      = label_tag 'Email'
+      = text_field_tag :email, '', class: 'form-control'
+    .form-group
+      = label_tag 'Password'
+      = password_field_tag :password, '', class: 'form-control'
+    .form-group
+      = submit_tag 'Save', class: 'btn btn-primary btn-lg'
