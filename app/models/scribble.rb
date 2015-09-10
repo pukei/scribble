@@ -1,10 +1,11 @@
 class Scribble < ActiveRecord::Base
-  before_save :markup_markdown
+  attr_accessor :markup
+  after_find :markup_content
 
   private
 
-  def markup_markdown
+  def markup_content
     markdown = Redcarpet::Markdown.new(Redcarpet::Render::HTML, autolink: true, tables: true)
-    self.content = markdown.render self.content
+    self.markup = markdown.render self.content
   end
 end

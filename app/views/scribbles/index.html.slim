@@ -1,8 +1,7 @@
 - @scribbles.each do |scribble|
   .jumbotron
     h2 = scribble.title
-    /p = sanitize(truncate(scribble.content.html_safe, length: 500))
-    p = truncate(strip_tags(scribble.content), length: 500)
+    p = truncate(strip_tags(scribble.markup), length: 500)
     p
       = link_to 'Read more...', scribble, class: 'btn btn-primary btn-lg'
       - if current_user
