@@ -1,4 +1,7 @@
 class Scribble < ActiveRecord::Base
+  extend FriendlyId
+  friendly_id :title, use: :slugged
+
   attr_accessor :markup
   after_find :markup_content
 
