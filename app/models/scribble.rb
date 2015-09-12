@@ -7,7 +7,8 @@ class Scribble < ActiveRecord::Base
   private
 
   def markup_content
-    markdown = Redcarpet::Markdown.new(Redcarpet::Render::HTML, autolink: true, tables: true)
+    renderer = Redcarpet::Render::HTML.new(no_links: true, hard_wrap: true, prettify: true)
+    markdown = Redcarpet::Markdown.new(renderer, autolink: true, tables: true, fenced_code_blocks: true)
     self.markup = markdown.render self.content
   end
 end
