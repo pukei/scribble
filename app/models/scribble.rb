@@ -2,6 +2,8 @@ class Scribble < ActiveRecord::Base
   attr_accessor :markup
   after_find :markup_content
 
+  scope :published, -> { where(on: true) }
+
   private
 
   def markup_content

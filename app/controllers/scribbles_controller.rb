@@ -5,7 +5,7 @@ class ScribblesController < ApplicationController
   # GET /scribbles
   # GET /scribbles.json
   def index
-    @scribbles = current_user ? Scribble.all : Scribble.where(on: true)
+    @scribbles = current_user ? Scribble.all : Scribble.published
   end
 
   # GET /scribbles/1
