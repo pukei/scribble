@@ -1,8 +1,9 @@
 - @scribbles.each do |scribble|
-  .jumbotron
-    h2 = scribble.title
-    p = truncate(strip_tags(scribble.markup), length: 200)
-    p
+  .panel.panel-default
+    .panel-heading
+      h2 = link_to scribble.title, scribble
+    .panel-body
+      = scribble.markup.html_safe
       = link_to 'Read more...', scribble, class: 'btn btn-primary btn-lg'
       - if current_user
         = link_to 'Destroy', scribble, data: { confirm: 'Are you sure?' }, method: :delete, class: 'btn btn-danger btn-lg pull-right'
