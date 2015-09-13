@@ -1,7 +1,8 @@
 .page-header
   h1
     = @scribble.title
-    small =< @scribble.created_at.strftime('%d %b %Y')
+    small
+      i =< @scribble.created_at.strftime('%d-%b-%Y')
 - if current_user
   = link_to 'Edit', edit_scribble_path(@scribble), class: 'btn btn-primary btn-lg pull-right'
 = @scribble.markup.html_safe

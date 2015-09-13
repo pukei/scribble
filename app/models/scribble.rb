@@ -1,16 +1,20 @@
 class Scribble < ActiveRecord::Base
+
+  # friendly ID config
   extend FriendlyId
   friendly_id :title, use: :slugged
 
-  paginates_per 5
+  # kamninari configs
   max_paginates_per 10
+  paginates_per 5
 
-  attr_accessor :markup
+  # callbacks and accessors
   after_find :markup_content
+  attr_accessor :markup
 
-  scope :published, -> { where(on: true) }
-
+  # scopes
   default_scope -> { order('created_at desc') }
+  scope :published, -> { where(on: true) }
 
   private
 

@@ -1,5 +1,5 @@
 class ScribblesController < ApplicationController
-  before_action :authorize, except: [:index, :show]
+  before_action :authorize!, except: [:index, :show]
   before_action :set_scribble, only: [:show, :edit, :update, :destroy]
 
   # GET /scribbles
