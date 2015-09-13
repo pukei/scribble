@@ -5,7 +5,8 @@ class ScribblesController < ApplicationController
   # GET /scribbles
   # GET /scribbles.json
   def index
-    @scribbles = current_user ? Scribble.all : Scribble.published
+    scribbles = current_user ? Scribble.all : Scribble.published
+    @scribbles = scribbles.page params[:page]
   end
 
   # GET /scribbles/1
