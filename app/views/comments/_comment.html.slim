@@ -1,4 +1,3 @@
-/- if @comments
 - if params[:comments] == 'true'
   #comments
     hr
@@ -7,8 +6,11 @@
         i There are #{@scribble.comments.size} comments
 
     - @scribble.comments.each do |comment|
-      | #{comment.commentator} on #{comment.created_at.strftime('%d-%b-%Y')}
+      h4
+        => comment.commentator
+        small on #{comment.created_at.strftime('%d-%b-%Y')}
       p
-        = comment.markup.html_safe
+        = sanitize comment.markup
+      hr
 
     = render "comments/form"

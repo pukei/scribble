@@ -7,11 +7,9 @@
           li = message
 
   .form-group
-    = f.label :title
-    = f.text_field :title, class: 'form-control'
+    = f.text_field :title, class: 'form-control', placeholder: 'Title'
   .form-group
-    = f.label :content
-    = f.text_area :content, class: 'form-control', 'data-provide' => 'markdown', rows: 10
+    = f.text_area :content, class: 'form-control', 'data-provide' => 'markdown', rows: 10, placeholder: 'The posts here'
   .form-group
     = f.label :on
     = f.check_box :on, class: 'form-control'

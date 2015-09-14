@@ -1,15 +1,13 @@
+h4 POST your THOUGHTS
 = form_for [@scribble, Comment.new] do |f|
   .form-group
-    = f.label :commentator
-    = f.text_field :commentator, class: 'form-control', required: true, placeholder: 'Do temme who you are'
+    = f.text_field :commentator, class: 'form-control', required: true, placeholder: 'Name'
 
   .form-group
-    = f.label :email
-    = f.email_field :email, class: 'form-control', required: true, placeholder: "It'll remain our little secret"
+    = f.email_field :email, class: 'form-control', required: true, placeholder: "Email (It'll remain our little secret)"
 
   .form-group
-    = f.label 'Comment (Markdown)'
-    = f.text_area :comment, class: 'form-control', 'data-provide' => 'markdown', rows: 10, required: true
+    = f.text_area :comment, class: 'form-control', 'data-provide' => 'markdown', rows: 10, required: true, placeholder: 'And you thoughts here (Markdown)'
 
   .form-group
     = f.submit 'Save', class: 'btn btn-primary btn-lg'
