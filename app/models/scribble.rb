@@ -11,7 +11,7 @@ class Scribble < ActiveRecord::Base
   default_scope -> { order('created_at desc') }
   scope :published, -> { where(on: true) }
 
-  has_many :comments
+  has_many :comments, dependent: :destroy
 
   include RenderMarkdown
   def markup
