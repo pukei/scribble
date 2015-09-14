@@ -12,6 +12,7 @@ class ScribblesController < ApplicationController
   # GET /scribbles/1
   # GET /scribbles/1.json
   def show
+    @comments = @scribble.comments.order('created_at DESC') if params[:comments] == 'true'
   end
 
   # GET /scribbles/new

@@ -18,6 +18,7 @@ ActiveRecord::Schema.define(version: 20150912151615) do
 
   create_table "comments", force: :cascade do |t|
     t.string   "commentator"
+    t.string   "email"
     t.text     "comment"
     t.boolean  "on"
     t.integer  "scribble_id"
@@ -31,8 +32,9 @@ ActiveRecord::Schema.define(version: 20150912151615) do
     t.string   "title"
     t.text     "content"
     t.boolean  "on"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.boolean  "no_more_comments", default: false
+    t.datetime "created_at",                       null: false
+    t.datetime "updated_at",                       null: false
     t.string   "slug"
   end
 

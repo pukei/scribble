@@ -3,7 +3,11 @@
     = @scribble.title
     small
       i =< @scribble.created_at.strftime('%d-%b-%Y')
+
 - if current_user
-  = link_to 'Edit', edit_scribble_path(@scribble), class: 'btn btn-primary btn-lg pull-right'
+  => link_to 'Edit', edit_scribble_path(@scribble), class: 'btn btn-primary btn-lg pull-right'
+= link_to 'Comments', scribble_path(@scribble, { comments: 'true' }) + '#comments', class: 'btn btn-primary btn-lg pull-right'
+
 = @scribble.markup.html_safe
 
+= render 'comments/comment'
