@@ -22,6 +22,8 @@ gem 'uglifier', '>= 1.3.0'
 
 group :production do
   gem 'pg'
+  gem 'puma'
+  gem 'rails_12factor'
   gem 'therubyracer'
 end
 
