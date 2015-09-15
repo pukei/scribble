@@ -1,9 +1,11 @@
 .page-header
-  h1
-    = @scribble.title
-    small
-      i =< @scribble.created_at.strftime('%d-%b-%Y')
-    = link_to 'Comments', scribble_path(@scribble, { comments: 'true' }) + '#comments', class: 'btn btn-info btn-lg pull-right'
+  .row
+    .col-sm-6
+      h1 = @scribble.title
+      small
+        i =< @scribble.created_at.strftime('%d-%b-%Y')
+    .col-sm-6
+      = link_to 'Comments', scribble_path(@scribble, { comments: 'true' }) + '#comments', class: 'btn btn-info btn-lg pull-right'
 
 - if current_user
   => link_to 'Edit', edit_scribble_path(@scribble), class: 'btn btn-danger btn-lg pull-right'

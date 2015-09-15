@@ -3,8 +3,8 @@
     .panel-heading
       h2
         = link_to scribble.title, scribble
-        small
-          i =< scribble.created_at.strftime('%d-%b-%Y')
+      small
+        i =< scribble.created_at.strftime('%d-%b-%Y')
     .panel-body
       = scribble.markup.html_safe
       = link_to 'Read more...', scribble, class: 'btn btn-primary btn-lg'
