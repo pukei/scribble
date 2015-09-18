@@ -1,4 +1,4 @@
-.page-header
+.well
   .row
     .col-sm-6
       h1
@@ -8,10 +8,12 @@
     .col-sm-6
       = link_to 'Comments', scribble_path(@scribble, { comments: 'true' }) + '#comments', class: 'btn btn-info pull-right'
 
-- if current_user
-  => link_to 'Edit', edit_scribble_path(@scribble), class: 'btn btn-danger pull-right'
+  br
+  br
+  - if current_user
+    => link_to 'Edit', edit_scribble_path(@scribble), class: 'btn btn-danger pull-right'
 
-.markup-markdown
-  = @scribble.markup.html_safe
+  .markup-markdown
+    = @scribble.markup.html_safe
 
 = render 'comments/comment'

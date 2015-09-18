@@ -7,7 +7,7 @@ h4 POST your THOUGHTS
     = f.email_field :email, class: 'form-control', required: true, placeholder: "Email (It'll remain our little secret)"
 
   .form-group
-    = f.text_area :comment, class: 'form-control', 'data-provide' => 'markdown', rows: 10, required: true, placeholder: 'And you thoughts here (Markdown)'
+    = f.text_area :comment, class: 'form-control', 'data-provide' => 'markdown', rows: 10, required: true, placeholder: 'And you thoughts here (Can be in markdown)'
 
   .form-group
     = f.submit 'Save', class: 'btn btn-primary'

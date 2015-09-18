@@ -1,12 +1,12 @@
-$border-radius-base: 0px;
-$border-radius-small: 0px;
-$border-radius-large: 0px;
-$btn-primary-bg: #53a93f;
+// $border-radius-base: 0px;
+// $border-radius-small: 0px;
+// $border-radius-large: 0px;
+// $btn-primary-bg: #53a93f;
 
 @import 'bootstrap-sprockets';
 @import 'bootstrap';
-// @import 'bootstrap-material-design';
-@import 'bootstrap-markdown';
+@import 'bootstrap-material-design';
+// @import 'bootstrap-markdown';
 
 .footer {
     padding-top: 40px;

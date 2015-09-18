@@ -5,8 +5,8 @@ ruby File.read('.ruby-version').rstrip
 gem 'rails', '~> 4.2.4'
 
 gem 'bcrypt', '~> 3.1.7'
-gem 'rails-bootstrap-markdown', '~> 2.6.0'
-# gem 'bootstrap-material-design'
+# gem 'rails-bootstrap-markdown', '~> 2.6.0'
+gem 'bootstrap-material-design'
 gem 'bootstrap-sass', '~> 3.3.5'
 gem 'bootstrap-kaminari-views'
 gem 'coffee-rails', '~> 4.1.0'
