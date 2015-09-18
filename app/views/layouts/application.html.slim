@@ -8,10 +8,11 @@ head
   title Scribble
   = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
   script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"
-  = javascript_include_tag 'application', 'data-turbolinks-track' => true
+  = javascript_include_tag 'application', 'data-turbolinks-track' => true, 'data-turbolinks-eval' => false
   = csrf_meta_tags
 
 body
+  /nav.navbar.navbar-default.navbar-fixed-top.shadow-z-2
   nav.navbar.navbar-default.shadow-z-2
     .container
       .navbar-header
@@ -27,6 +28,8 @@ body
           ul.nav.navbar-nav.navbar-right
             li = link_to 'New scribble', new_scribble_url
             li = link_to 'Log out', logout_url
+
+  /.container style="position: relative; top: 70px"
   .container
     .row
       .col-sm-10.col-sm-offset-1

@@ -1,17 +1,15 @@
 - if params[:comments] == 'true'
-  .well
-    #comments
+  #comments.well
+    h4
+      i Comments:
+    hr
+
+    - @scribble.comments.each do |comment|
+      h4
+        b => comment.commentator
+        small on #{comment.created_at.strftime('%d-%b-%Y')}
+      p
+        = sanitize comment.markup
       hr
-      .page-header
-        h4
-          i There are #{@scribble.comments.size} comments
 
-      - @scribble.comments.each do |comment|
-        h4
-          => comment.commentator
-          small on #{comment.created_at.strftime('%d-%b-%Y')}
-        p
-          = sanitize comment.markup
-        hr
-
-      = render "comments/form"
+    == render "comments/form"
