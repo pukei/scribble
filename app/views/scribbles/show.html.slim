@@ -1,18 +1,18 @@
 .well
-  .row
-    .col-sm-6
-      h1
-        u = link_to @scribble.title, @scribble
-      small
-        i =< @scribble.created_at.strftime('%d-%b-%Y')
-    .col-sm-6
-      = link_to scribble_path(@scribble, { comments: 'true' }) + '#comments', class: 'btn btn-fab btn-raised btn-danger pull-right', title: 'Comments' do
-        i.mdi-content-add
+  h1
+    u = link_to @scribble.title, @scribble
+  small
+    i =< @scribble.created_at.strftime('%d-%b-%Y')
   br
   br
-  - if current_user
-    => link_to edit_scribble_path(@scribble), class: 'btn btn-fab btn-raised btn-info pull-right', title: 'Edit' do
-      i.mdi-editor-border-color
   .markup-markdown
     = @scribble.markup.html_safe
+
 = render 'comments/comment'
+
+= link_to scribble_path(@scribble, { comments: 'true' }) + '#comments', class: 'btn btn-fab btn-raised btn-danger floating-icons', title: 'Comments' do
+  i.mdi-content-add
+
+- if current_user
+  => link_to edit_scribble_path(@scribble), class: 'btn btn-fab btn-raised btn-info floating-icons', title: 'Edit', style: 'bottom: 85px' do
+    i.mdi-editor-border-color

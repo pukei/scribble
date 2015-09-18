@@ -8,6 +8,13 @@
 @import 'bootstrap-material-design';
 // @import 'bootstrap-markdown';
 
+.floating-icons {
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    z-index: 100;
+}
+
 .footer {
     padding-top: 40px;
     padding-bottom: 40px;
