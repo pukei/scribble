@@ -8,6 +8,10 @@
 @import 'bootstrap-material-design';
 // @import 'bootstrap-markdown';
 
+@media only screen and (min-width: 600px) {
+  .well { padding: 10% !important; }
+}
+
 .floating-icons {
     position: fixed;
     bottom: 20px;
