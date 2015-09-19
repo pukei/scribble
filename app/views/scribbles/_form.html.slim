@@ -1,18 +1,10 @@
-= form_for @scribble do |f|
-  - if @scribble.errors.any?
-    #error_explanation
-      h2 = "#{pluralize(@scribble.errors.count, "error")} prohibited this scribble from being saved:"
-      ul
-        - @scribble.errors.full_messages.each do |message|
-          li = message
+= bootstrap_form_for @scribble do |f|
+  = f.text_field :title, placeholder: 'Title'
+  = f.text_area :content, 'data-provide' => 'markdown', rows: 10, placeholder: 'The posts here'
+  = f.check_box :on do
+    span.checkbox-material
+      span.check
+    |  On
 
-  .form-group
-    = f.text_field :title, class: 'form-control', placeholder: 'Title'
-  .form-group
-    = f.text_area :content, class: 'form-control', 'data-provide' => 'markdown', rows: 10, placeholder: 'The posts here'
-  .form-group
-    = f.label :on
-    = f.check_box :on, class: 'form-control'
-  .form-group
-    = f.submit 'Save', class: 'btn btn-primary'
-    = link_to 'Cancel', root_url, class: 'btn btn-default pull-right'
+  = f.submit 'Save', class: 'btn btn-primary'
+  = link_to 'Cancel',  @scribble || root_url, class: 'btn btn-default pull-right'

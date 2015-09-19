@@ -1,15 +1,11 @@
 h4
   i POST your THOUGHTS
-= form_for [@scribble, Comment.new] do |f|
-  .form-group
-    = f.text_field :commentator, class: 'form-control', required: true, placeholder: 'Name'
+= bootstrap_form_for [@scribble, Comment.new] do |f|
+    = f.text_field :commentator, required: true, placeholder: 'Name'
 
-  .form-group
-    = f.email_field :email, class: 'form-control', required: true, placeholder: "Email (It'll remain our little secret)"
+    = f.email_field :email, required: true, placeholder: "Email (It'll remain our little secret)"
 
-  .form-group
-    = f.text_area :comment, class: 'form-control', 'data-provide' => 'markdown', rows: 10, required: true, placeholder: 'And you thoughts here (Can be in markdown)'
+    = f.text_area :comment, 'data-provide' => 'markdown', rows: 10, required: true, placeholder: 'And you thoughts here (Can be in markdown)'
 
-  .form-group
     = f.submit 'Save', class: 'btn btn-raised btn-primary'
     = link_to 'Cancel', @scribble, class: 'btn btn-default pull-right'
