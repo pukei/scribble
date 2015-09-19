@@ -1,16 +1,10 @@
 - @scribbles.each do |scribble|
-  .panel.panel-default
-    .panel-heading
-      h2
-        u = link_to scribble.title, scribble
-      small
-        i =< scribble.created_at.strftime('%d-%b-%Y')
-    .panel-body
-      .markup-markdown
-        = scribble.markup.html_safe
-      br
-        = link_to 'Read more...', scribble, class: 'btn btn-primary'
-        - if current_user
-          = link_to 'Destroy', scribble, data: { confirm: 'Are you sure?' }, method: :delete, class: 'btn btn-raised btn-danger pull-right'
+  .well
+    = render "scribbles/show", scribble: scribble
+    br
+    = link_to 'More...', scribble, class: 'btn btn-primary'
+    - if current_user
+      = link_to 'Destroy', scribble, data: { confirm: 'Are you sure?' }, method: :delete, class: 'btn btn-raised btn-danger pull-right'
 
 = paginate @scribbles, theme: 'twitter-bootstrap-3'
+
