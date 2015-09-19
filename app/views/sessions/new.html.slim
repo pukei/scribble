@@ -10,4 +10,5 @@
         = label_tag 'Password'
         = password_field_tag :password, '', class: 'form-control'
       .form-group
-        = submit_tag 'Save', class: 'btn btn-primary'
+        = submit_tag 'Sign in', class: 'btn btn-primary'
+        = link_to 'Cancel', root_url, class: 'btn btn-default pull-right'
