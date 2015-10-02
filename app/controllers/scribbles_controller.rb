@@ -8,6 +8,7 @@ class ScribblesController < ApplicationController
   end
 
   def show
+    redirect_to scribbles_path unless @scribble.on || current_user
   end
 
   def new
