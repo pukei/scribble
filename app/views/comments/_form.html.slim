@@ -5,7 +5,8 @@ h4
 
     = f.email_field :email, required: true, placeholder: "Email (It'll remain our little secret)"
 
-    = f.text_area :comment, 'data-provide' => 'markdown', rows: 10, required: true, placeholder: 'And you thoughts here (Can be in markdown)'
+    = f.text_area :comment, 'data-provide' => 'markdown', rows: 10, required: true,
+        placeholder: 'And your thoughts here (It can even be in markdown)'
 
     = f.submit 'Save', class: 'btn btn-raised btn-primary'
     = link_to 'Cancel', @scribble, class: 'btn btn-default pull-right'
