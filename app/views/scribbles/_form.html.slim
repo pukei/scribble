@@ -1,6 +1,6 @@
 = bootstrap_form_for @scribble do |f|
   = f.text_field :title, placeholder: 'Title'
-  = f.text_area :content, 'data-provide' => 'markdown', rows: 10, placeholder: 'The posts here'
+  = f.text_area :content, rows: 10, placeholder: 'The posts here'
   = f.check_box :on do
     span.checkbox-material
       span.check
