@@ -8,7 +8,7 @@ class Scribble < ActiveRecord::Base
   paginates_per 5
 
   # scopes
-  default_scope -> { order('created_at desc') }
+  default_scope -> { order('updated_at desc') }
   scope :published, -> { where(on: true) }
 
   has_many :comments, dependent: :destroy
