@@ -1,7 +1,8 @@
 h2
   u = link_to scribble.title, scribble
 small
-  i =< scribble.created_at.strftime('%d-%b-%Y')
+  | Last scribbled on
+  i =< scribble.updated_at.strftime('%d-%b-%Y')
 hr
 .markup-markdown
   = scribble.markup.html_safe
