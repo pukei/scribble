@@ -17,6 +17,7 @@
 //= require bootstrap-sprockets
 //= require bootstrap-material-design
 //= require jquery.autosize
+//= require parallax
 //= require_tree .
 
 $(document).ready(function(){
