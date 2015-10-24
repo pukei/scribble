@@ -8,17 +8,20 @@
 @import 'bootstrap-material-design';
 // @import 'bootstrap-markdown';
 
-html {
-  background: url('/bg.jpg') no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
+body {
+  background-image: url(/bg.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
   background-size: cover;
+  background-color: #607D8B;
 }
 
-body {
-  background-color: transparent;
-  opacity: 0.9;
+/* For mobile devices */
+@media only screen and (max-width: 767px) {
+  body {
+    background-image: url(/bg_small.jpg);
+  }
 }
 
 @media only screen and (min-width: 600px) {
