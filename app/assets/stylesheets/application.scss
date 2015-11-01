@@ -56,3 +56,7 @@ body {
 .well {
   margin-bottom: 100px !important;
 }
+
+label.required:after {
+  content:" *";
+}

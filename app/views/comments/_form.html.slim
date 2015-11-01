@@ -1,12 +1,12 @@
 h4
   i POST your THOUGHTS
 = bootstrap_form_for [@scribble, Comment.new] do |f|
-    = f.text_field :commentator, required: true, placeholder: 'Name'
+    = f.text_field :commentator, required: true, placeholder: 'You can temme your name, right!', label_class: 'required'
 
-    = f.email_field :email, required: true, placeholder: "Email (It'll remain our little secret)"
+    = f.email_field :email, required: true, placeholder: "Email (It'll remain our little secret)", label_class: 'required'
 
     = f.text_area :comment, rows: 10, required: true,
-        placeholder: 'And your thoughts here (It can even be in markdown)'
+        placeholder: 'And your thoughts here (Markdown supported here)', label_class: 'required'
 
     = f.submit 'Save', class: 'btn btn-raised btn-primary'
     = link_to 'Cancel', @scribble, class: 'btn btn-default pull-right'
