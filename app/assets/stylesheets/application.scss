@@ -1,33 +1,6 @@
-// $border-radius-base: 0px;
-// $border-radius-small: 0px;
-// $border-radius-large: 0px;
-// $btn-primary-bg: #53a93f;
-
 @import 'bootstrap';
 @import 'rails_bootstrap_forms';
 @import 'bootstrap-material-design';
-// @import 'bootstrap-markdown';
-
-html{
-  height: 100%;
-  min-height: 100%;
-}
-
-body {
-  background-image: url(/bg.jpg);
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: cover;
-  background-color: #607D8B;
-}
-
-/* For mobile devices */
-@media only screen and (max-width: 767px) {
-  body {
-    min-height:100%;
-    background-image: url(/bg_small.jpg);
-  }
-}
 
 @media only screen and (min-width: 600px) {
   .well { padding: 10% !important; }
@@ -38,15 +11,6 @@ body {
     bottom: 20px;
     right: 30px;
     z-index: 100;
-}
-
-.footer {
-    padding-top: 40px;
-    padding-bottom: 40px;
-    margin-top: 60px;
-    color: #767676;
-    text-align: center;
-    // border-top: 1px solid #e5e5e5;
 }
 
 .markup-markdown {

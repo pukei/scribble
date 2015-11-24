@@ -12,8 +12,7 @@ html
     = csrf_meta_tags
 
   body
-    /nav.navbar.navbar-default.shadow-z-2
-    nav.navbar.navbar-default.navbar-fixed-top.shadow-z-2 style="opacity: 0.9"
+    nav.navbar.navbar-default.navbar-fixed-top.shadow-z-2 style="opacity: 0.7"
       .container
         .navbar-header
           - if current_user
@@ -29,11 +28,7 @@ html
               li = link_to 'New scribble', new_scribble_url
               li = link_to 'Log out', logout_url
 
-    /.container
-    .container style="position: relative; top: 140px; z-index: 2000;"
+    .container style="position: relative; top: 140px"
       .row
         .col-md-10.col-md-offset-1
           = yield
-    footer.footer
-      .container
-        /p.text-muted Place sticky footer content here.
