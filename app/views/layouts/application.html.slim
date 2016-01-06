@@ -13,6 +13,7 @@ html
 
   body
     = render 'layouts/gtm_script'
+    = render 'layouts/adsense_script'
     nav.navbar.navbar-default.navbar-fixed-top.shadow-z-2 style="opacity: 0.7"
       .container
         .navbar-header
@@ -30,6 +31,7 @@ html
               li = link_to 'Log out', logout_url
 
     nav.navbar.navbar-inverse.navbar-fixed-top style="height: 50vh; z-index: 0"
+    /= google_adsense_include_tag client: 'ca-pub-2778457884231488', slot: '9429245650', format: 'auto'
     .container style="position: relative; top: 140px"
       .row
         .col-md-10.col-md-offset-1
