@@ -20,4 +20,17 @@ class SessionsController < ApplicationController
     session[:user_id] = nil
     redirect_to '/login'
   end
+
+  def share_screen
+    @api_key = 45546502
+    api_secret = '35a519d48c57296252f8f94e2bb207fde06152cb'
+    opentok = OpenTok::OpenTok.new @api_key, api_secret
+    if params[:session_id]
+      @session_id = params[:session_id]
+    else
+      s = opentok.create_session
+      @session_id = s.session_id
+    end
+    @token = opentok.generate_token @session_id
+  end
 end
