@@ -1,9 +1,9 @@
 .well
   = render "scribbles/show", scribble: @scribble
 
-= render 'comments/comment'
+/= render 'comments/comment'
 
-= link_to scribble_path(@scribble, { comments: 'true' }) + '#comments', class: 'btn btn-fab btn-raised btn-danger floating-icons', title: 'Comments' do
+/= link_to scribble_path(@scribble, { comments: 'true' }) + '#comments', class: 'btn btn-fab btn-raised btn-danger floating-icons', title: 'Comments' do
   i.mdi-content-add
 
 - if current_user
