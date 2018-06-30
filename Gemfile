@@ -23,7 +23,7 @@ gem 'slim-rails'
 gem 'uglifier', '>= 1.3.0'
 
 group :production do
-  gem 'pg'
+  gem 'pg', '~> 0.18'
   gem 'puma'
   gem 'rails_12factor'
   gem 'therubyracer'
